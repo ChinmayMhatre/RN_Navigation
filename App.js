@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+
 import PageA from './components/PageA';
 import PageB from './components/PageB';
+// import PageC here
+
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,6 +17,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="PageA" >
         <Stack.Screen name="PageA" component={PageA} />
         <Stack.Screen name="PageB" component={PageB} />
+        {/* Add Stack.Screen for PageC here */}
       </Stack.Navigator>
     </NavigationContainer>
   );

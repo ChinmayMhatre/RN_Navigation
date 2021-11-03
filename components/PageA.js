@@ -7,6 +7,9 @@ const PageA = ({navigation}) => {
             <TouchableOpacity onPress={()=>navigation.navigate("PageB")}  >
                 <Text style={styles.text}>Go to PageB</Text>
             </TouchableOpacity>
+            {/* 
+                Add button to go to PageC here
+            */}
         </View>
     )
 }
