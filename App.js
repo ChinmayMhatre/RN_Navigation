@@ -1,13 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import PageA from './components/PageA';
+import PageB from './components/PageB';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="PageA" >
+        <Stack.Screen name="PageA" component={PageA} />
+        <Stack.Screen name="PageB" component={PageB} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
